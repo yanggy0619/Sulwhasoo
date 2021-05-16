@@ -1,0 +1,130 @@
+@charset "utf-8";
+@font-face {
+    font-family: "Mapo";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Mapo"),
+         url("../fonts/MapoFlowerIsland/MapoFlowerIsland.otf") format("opentype"),
+         url("../fonts/MapoFlowerIsland/MapoFlowerIsland.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Eulyoo";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Eulyoo/Eulyoo1945-Regular.eot");
+    src: local("Eulyoo"),
+         url("../fonts/Eulyoo/Eulyoo1945-Regular.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/Eulyoo/Eulyoo1945-Regular.woff") format("woff"),
+         url("../fonts/Eulyoo/Eulyoo1945-Regular.woff2") format("woff2"),
+         url("../fonts/Eulyoo/Eulyoo1945-Regular.ttf") format("truetype"),
+         url("../fonts/Eulyoo/Eulyoo1945-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Eulyoo";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Eulyoo/Eulyoo1945-SemiBold.eot");
+    src: local("Eulyoo"),
+         url("../fonts/Eulyoo/Eulyoo1945-SemiBold.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/Eulyoo/Eulyoo1945-SemiBold.woff") format("woff"),
+         url("../fonts/Eulyoo/Eulyoo1945-SemiBold.woff2") format("woff2"),
+         url("../fonts/Eulyoo/Eulyoo1945-SemiBold.ttf") format("truetype"),
+         url("../fonts/Eulyoo/Eulyoo1945-SemiBold.otf") format("opentype");
+}
+@font-face {
+    font-family: "Spoqa";
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Thin.eot");
+    src: local("Spoqa Han Sans Neo"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Thin.eot?#iefix"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Thin.woff") format("woff"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Thin.woff2") format("woff2"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Thin.otf") format("opentype");
+}
+@font-face {
+    font-family: "Spoqa";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Light.eot");
+    src: local("Spoqa Han Sans Neo"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Light.eot?#iefix"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Light.woff") format("woff"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Light.woff2") format("woff2"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: "Spoqa";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Regular.eot");
+    src: local("Spoqa Han Sans Neo"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Regular.eot?#iefix"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Regular.woff") format("woff"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Regular.woff2") format("woff2"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "Spoqa";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Medium.eot");
+    src: local("Spoqa Han Sans Neo"),
+    url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Medium.eot?#iefix"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Medium.woff") format("woff"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Medium.woff2") format("woff2"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Medium.otf") format("opentype");
+}
+@font-face {
+    font-family: "Spoqa";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Bold.eot");
+    src:  local("Spoqa Han Sans Neo"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Bold.eot?#iefix"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Bold.woff") format("woff"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Bold.woff2") format("woff2"),
+         url("../fonts/SpoqaHanSansNeo_all/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Bold.otf") format("opentype");
+}
+
+/* tag reset */
+body, h1, h2, h3, h4, h5, h6, p, ul, button, figure{margin: 0;padding: 0;}
+h1, h2, h3, h4, h5, h6{font-size: 100%;font-weight: 300;}
+ul{list-style: none;}
+img{border: none;vertical-align: top;}
+a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
+address{font-style: normal;}
+button{border: none;background: none;cursor: pointer;font-family: inherit;font-size: inherit;color: inherit;}
+header, nav, section, footer, aside, figure, figcaption{display: block;}
+
+/* common class */
+.f_l{float: left;}
+.f_r{float: right;}
+.p_r{position: relative;}
+.p_a{position: absolute;}
+.blind{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
+.clearfix::after{content: "";display: block;clear: both;}
+.bdbox{box-sizing: border-box;}
+.area{width: 1270px;margin: 0 auto;padding: 140px 0px;}
+
+body{font-family: "Eulyoo";font-size: 16px;color:#3b3b3b;}
+
+/* skip네비게이션:반복영역 건너뛰기 */
+#skip a{position: absolute;top: 0;left: -9999px;z-index: 1000;}
+#skip a:focus{left: 0;background: #fcb95e;color: #3b3b3b;width: 100%;height: 50px;line-height: 50px;text-align: center;}
+
+/* #gnb */
+.btn_nav{position: absolute;top: 130px;left: 49px;}
+
+
+/* #gnb, .gnb_bg{position: fixed;opacity: 0;} */
+#gnb{/*visibility: hidden;opacity: 0;*/position: absolute;top: 43px;left: 47px;z-index: 100;}
+#gnb > ul{font-size: 30px;padding: 100px 0 0 3px;}
+#gnb > ul > li + li{padding-top: 40px;}
+#gnb ul li ul li{padding: 10px 0 0 6px; font-size: 16px;}
+#gnb ul li a:hover{color: #fcb95e;border-bottom: 1px solid #fcb95e;}
+.gnb_bg{background: url(../images/common/gnb/bg.jpg);top: 0;left: 0;width: 300px;height: 100%;}
+
+/* footer  */
+
