@@ -2,21 +2,22 @@
 /* #cnt1 */
 #videoBg{width: 100%;height: 100vh;object-fit: cover;}
 
-/* #cnt2 */
+ #cnt2 
 #cnt2{height: 700px;}
-/* 텍스트 */
-#cnt2 .txt_cnt2{line-height: 50px;margin-bottom: 200px;width: 280px;text-align: center;}
+ /* 텍스트  */
+#cnt2 .txt_cnt2{line-height: 50px;padding: 100px 200px;width: 280px;text-align: center;}
 #cnt2 p{font-size: 25px;}
 #cnt2 h3{font-size: 40px;}
 #cnt2{position: relative;}
 #cnt2 .txt_cnt2 > a{display: inline-block; font-size: 20px;border: 1px solid #3b3b3b;width: 120px;height: 30px;line-height: 30px;text-align: center;}
 #cnt2 .txt_cnt2 > a:hover{border: 1px solid #fcb95e;background: #fcb95e;color: #fff;}
+
 /* 화살표 */
-#cnt2 .arrow_cnt2{position: absolute;top: 210px;right: 0;width: 140px;height: 15px;}
-.button_next::after{content:"";position: absolute;top: 0;left: 70px;background: url(../images/index/section2/화살표\(우\).png);width: 70px;height: 19px;}
-.button_next:hover::after{background: url(../images/index/section2/화살표\(우\)hover.png);}
-.button_prev::after{content:"";position: absolute;top: 0;left: -70px;background: url(../images/index/section2/화살표\(좌\).png);width: 70px;height: 19px;}
-.button_prev:hover::after{background: url(../images/index/section2/화살표\(좌\)hover.png);}
+.swiper-button-prev, .swiper-button-next{position: absolute;top: 210px;right: 0;width: 140px;height: 15px;}
+.swiper-button-next::after{content:"";position: absolute;top: 0;left: 70px;background: url(../images/index/section2/화살표\(우\).png);width: 70px;height: 19px;}
+.swiper-button-next:hover::after{background: url(../images/index/section2/화살표\(우\)hover.png);}
+.swiper-button-prev::after{content:"";position: absolute;top: 0;left: -70px;background: url(../images/index/section2/화살표\(좌\).png);width: 70px;height: 19px;}
+.swiper-button-prev:hover::after{background: url(../images/index/section2/화살표\(좌\)hover.png);}
 .circle_prev{position: absolute;top: -10px;left: -80px;}
 .circle_next{position: absolute;top: -10px;left: 100px;}
 .circle_prev,.circle_next{stroke-dasharray: 144;stroke-dashoffset: 144;}
@@ -25,18 +26,24 @@
   0%{stroke-dashoffset: 144;}
   100%{stroke-dasharray: 0;}
 }
-/* 제품 */
-#cnt2 ul{display: flex;justify-content: space-between;align-items:flex-end ;}
-#cnt2 ul li{text-align: center;}
-.product_bg{position: absolute;bottom: 210px;left: calc(50% - 191.5px); z-index: -1;}
+/* 화살표 */
+#cnt2 .controller div::after{display: none;} /* 파랑 화살표 제거 */
 
-/* 보더라인 */
+ /* 제품  */
+ #cnt2 .swiper-container{overflow: visible;}
+ #cnt2 .inner{overflow: hidden;}
+#cnt2 .swiper-wrapper{text-align: center; align-items: flex-end;padding: 100px 0px;}
+
+/* 제품 배경 */
+#cnt2 .product_bg{position: absolute;bottom: 150px;left: calc(50% - 191.5px); z-index: -1;}
+
+/* 보더라인
 #cnt2 .bdline_cnt{position: absolute;bottom: 80px;left: calc(50% - 350px); background: #3b3b3b;width: 700px;height: 1px;}
-#cnt2 .bdline_cnt::before{content:"";position: absolute;top: -2px; background: #fcb95e;width: 230px;height: 7px;}
+#cnt2 .bdline_cnt::before{content:"";position: absolute;top: -2px; background: #fcb95e;width: 230px;height: 7px;} */
 
 
 /* #cnt3 */
-#cnt3 {display: flex;align-items: center;justify-content: center; background:url(../images/index/section3/메인이미지.png) no-repeat fixed center;width: 100vw;height: 100vh;text-align: center;background-size: cover;}
+#cnt3 {display: flex;align-items: center;justify-content: center; background:url(../images/index/section3/메인이미지.png) no-repeat fixed center;width: 100%;height: 100vh;text-align: center;background-size: cover;}
 #cnt3 h4{font-family: spoqa; font-size: 70px;color: #fff;line-height: 1.5;}
 
 /* #cnt4 */
