@@ -1,91 +1,92 @@
-$(document).ready(function () {
-  var scrollT;
-  var timer = 0;
+$(document).ready(function() {
+    var $gnb = $('#gnb');
 
-  //scroll 되면 검정 배경색 추가
-  $(window).on('scroll', function () {
-    clearTimeout(timer);
+    // 전체 메뉴 여닫기
+    $gnb.find('ul li ul').hide();   //gnb 뎁스2 ul 숨기고 시작
 
-    setTimeout(function () {
-      scrollT = $(this).scrollTop();
+    $('#header .btn_nav').on('click', function () {
+      var $first = $gnb.find('[data-link="first"]'); //gnb 에서 가장 처음 포커스를 가질 태그
+      var $last = $gnb.find('[data-link="last"]');  //gnb 에서 가장 마지막으로 포커스를 가질 태그
+      var $openbtn = $(this);  //메뉴 열기 버튼을 변수에 저장
+  
+      $('.gnb_dim').stop().fadeIn('fast');  //검정 dim마스크 나타나기
+  
+      // 네비게이션 left 좌표값 -300에서 0으로 애니메이션 되며 나타나기
+      $gnb.css({visibility: 'visible'}).stop().animate({left: 0}, 300, function () {
+        $first.focus();
+        $('html').css({overflowY: 'hidden', height: '100%'});
+      });
+  
+      // 메뉴 닫기를 선택하지 않았다면 탭을 누르는 경우 포커스가 메뉴 안에서만 회전되도록 제어
+      $first.on('keydown', function (e) {
+        if (e.shiftKey && e.keyCode == 9) {
+          e.preventDefault();
+          $last.focus();
+        }
+      });
+      $last.on('keydown', function (e) {
+        if (!e.shiftKey && e.keyCode == 9) {
+          e.preventDefault();
+          $first.focus();
+        }
+      });
+  
+      // 메뉴 닫기로 네비게이션 닫기기
+      $gnb.find('.btn_navclose').on('click', function () {
+        $('html').removeAttr('style');
+        $('.gnb_dim').stop().fadeOut('fast');
+        $gnb.stop().animate({left: -300}, 300, function () {
+          $(this).css({visibility: 'hidden'}).find('ul li').removeClass('on').children('ul').stop().slideUp();
+          $openbtn.focus();  //visibility: hidden된 닫기 버튼의 포커스를 열기 버튼으로 강제 이동시켜 주기
+        });
+      });
 
-      if (scrollT > 20) $('#header').addClass('bgchange');
-      else $('#header').removeClass('bgchange');
-    }, 50);
+      return false;
+    });
+  
+    // gnb a 클릭시 하위 depth 열리고 닫기
+    $gnb.find('a').on('click', function () {
+      if ($(this).next().size() == 0) {	//하위에 뎁스 ul이 없는 경우
+        location.href=$(this).attr("href");
+      }else {								//하위에 뎁스 ul이 있는 경우
+        //초기화
+        $(this).parent().siblings().removeClass('on').children('ul').stop().slideUp('fast');
+        //현재설정
+        $(this).next().stop().slideToggle("fast").parent().toggleClass('on');
+      }
+  
+      return false;
+    });
+    
+  // 검색어 열기 버튼태그 클릭시
+  $('#header .search').on('click', function () {
+    //닫겨진 경우 -> 열기
+    if ( !$(this).hasClass('on') ) {
+        $(this).addClass('on').next().stop().slideDown('fast', function () {
+          $(this).prev().children().attr('alt', '검색 닫기');
+        });
+    }
+    //열려진 경우 -> 닫기
+    else {
+      $(this).removeClass('on').next().stop().slideUp('fast', function () {
+        $(this).prev().children().attr('alt', '검색 열기');
+      });
+    }
+
+    //검색창이 열린채로 포커스가 나가면 닫아주자
+		$(this).on('keydown', function (e) {
+      if (e.shiftKey && e.keyCode === 9) $(this).trigger('click');
+    });
+    $('.search_input button').on('keydown', function (e) {
+      if ( !e.shiftKey && e.keyCode === 9 ) $('.search').trigger('click');
+    });	
   });
 
-  //메뉴 열기와 닫기 : ios에서는 disiplay: none이었다 block으로 바뀌어도 포커스가 가지 못하는 버그가 발생한다 -> visibility 속성으로 대신함
-  $('.btn_all').on('click', function () {
-    if ($(this).hasClass('close')) { //닫기
-      $('#gnb').animate({opacity: 0}, 300, function () {
-        $(this).css({visibility: 'hidden', top: 150}).removeClass('active');
-        $('.btn_all').removeClass('close').children('.blind').text('전체메뉴 열기');
-      });
-    } else {  //열기
-      $(this).toggleClass('close').children('.blind').text('전체메뉴 닫기');
-      $('#gnb').addClass('active').css('visibility', 'visible').delay(500).animate({opacity: 1, top: 100}, 500);
-		}
-		
-		//메뉴가 열린 채로 회원가입과 예약하기에서 포커스가 나가면 메뉴를 닫아주자
-		$('.util a:first, .util a:last').on('blur', function () {
-			//이탈된 포커스를 누군가 받아줄 대기 시간을 지정 - setTimeout
-			setTimeout(function () {
-			//.util 내부의 a가 아닌 위치에 포커스가 가면 초기화 시키기 => .util 내부의 a가 포커스를 가지고 있지 않다면...
-			if ( !$('.util a').is(':focus') ) $('.btn_all').trigger('click');  
-			}, 10);
-		});		
+  // top 이동 버튼
+  $('.btn_top').on('click', function () {
+    $("html, body").stop().animate({scrollTop: 0});
+    $('.logo a').focus();
 
     return false;
   });
-
-	/* 패밀리사이트 */
-	var $family=$("#footer .family");
-	var $btn = $family.find("a").first();		//depth1 a:Family Site라는 텍스트가 담긴 링크
-	var $btnSubmit =	$family.find("a").last();		//확인(새창열기 버튼)
-	var tgHref;
-	
-	//1-1) $btn을 클릭해서 ul 태그 열어주기
-	$btn.on("click",function  (e) {
-		e.preventDefault();
-
-		$(this).next().stop().show().parent().addClass('on');
-
-		//1-2) ul 태그에서 마우스가 떠나면 닫아주기
-		$(this).next().on("mouseleave",function  () {
-			$(this).stop().hide().parent().removeClass('on');
-		});
-
-		//1-3) focus가 family 내부에 있지 않을 경우 닫아주기
-		$family.find("a:first , a:last").on("blur",function  () {
-			setTimeout(function  () {
-				if (!$family.find("a").is(":focus")) $family.find(">ul").stop().hide();
-			}, 1000);
-		});
-
-		//2) ul li a를 클릭하면 자신의 텍스트와 href를 변수에 담아 $btn에 글자를 강제로 바꾼다=> ul 태그 닫아주기
-		$family.find(">ul>li>a").on("click",function  (e) {
-			e.preventDefault();
-			var tgTxt=$(this).text();
-			tgHref=$(this).attr("href");
-			//console.log(tgTxt, tgHref);
-
-			$btn.text(tgTxt).focus().next().stop().show();
-		});
-	});
-
-	//3) 확인버튼 눌러 페이지 이동시키기
-	$btnSubmit.on("click",function  (e) {
-		e.preventDefault();
-		if ($btn.text()=="Family Site") return false;
-
-		//window.open("열려질 새창의 경로명","팝업창 이름","옵션");
-		window.open(tgHref, "popup");
-	});
-
-	// top 이동 버튼
-	$(".btn_top").on("click", function () {
-		$("html, body").stop().animate({scrollTop: 0});
-		return false;
-	});
-
 });
