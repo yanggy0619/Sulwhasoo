@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.flagship_store {padding-top: 100px;}
+.txt_flag{text-align: center;position: relative;}
+.txt_flag h2{font-size: 40px;color:#f57e3c}
+.txt_flag > p{font-size: 15px;padding-top: 20px;}
+.txt_flag{padding-top: 15px;line-height: 25px;}
+.txt_flag .scroll{padding-top: 40px;}
+.txt_flag .scroll p::after{content: "";display: block;background: #3b3b3b;width: 1px;height: 50px;margin: 10px auto;}
+.address{padding-left: 30px;line-height: 30px;font-family: spoqa;}
+.address h3{font-size: 40px;color:#f57e3c}
+.address img{padding-top: 20px;}
+.address h4{font-weight: 400;}
+
+.flagship_pic{width: 1780px;height: 890px; margin: 50px auto;}
+.fade .fade_up, .fade .fade_down, .fade .fade_right, .fade .fade_left{opacity: 0;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;transition: all 1s;}
+.fade .fade_up{transform: translate(0,100px);}
+.fade .fade_down{transform: translate(0,-100px);}
+.fade .fade_right{transform: translate(-100px,0);}
+.fade .fade_left{transform: translate(100px,0);}
+.fade.on .fade_up, .fade.on .fade_down, .fade.on .fade_right, .fade.on .fade_left{opacity: 1; transform: translate(0,0);}
+
+.flagship_map{display:flex;align-items: flex-start;justify-content: center;padding: 100px 0;}
+.address p span{font-weight: 700;}
+.address p:last-child{line-height: 23px;font-size: 14px;margin-left: 45px;}
+.address p:last-child span{background: rgb(252, 185, 94,.7);width: 225px; height: 7px;z-index: -1;}
+
+
