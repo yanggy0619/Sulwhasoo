@@ -13,6 +13,7 @@
   <script src="js/jquery-1.12.4.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/fadeIn.js"></script>
 
   <script>
     window.addEventListener('load', function () {
@@ -64,7 +65,7 @@
     </a>
     <nav id="gnb">
       <h2 class="blind">주메뉴</h2>
-      <button class="btn_navclose" type="button" data-link="last"><img src="images/common/nav_뒤로가기.png" alt=""></button>
+      <button class="btn_navclose" type="button" data-link="last"><img src="images/common/nav_back.png" alt=""></button>
       <ul>
         <li><a href="" data-link="first">브랜드스토리</a></li>
         <li><a href="">제품</a>
@@ -119,7 +120,13 @@
         <a href="">제품 더보기</a>
       </div>
 
-    <div class="product_bg"><img src="images/index/section2/설린세럼bg.png" alt=""></div
+    <div class="product_bg">
+      <img src="images/index/section2/설린세럼bg.png" alt="">
+      <!-- <img src="images/index/section2/여온오일bg.png" alt="">
+      <img src="images/index/section2/수율크림bg.png" alt="">
+      <img src="images/index/section2/자음생앰플bg.png" alt="">
+      <img src="images/index/section2/윤조에센스bg.png" alt=""> -->
+    </div>
       <!-- 슬라이더 -->
       <div class="inner">
         <div class="swiper-container">
@@ -169,35 +176,37 @@
       <h4>TIMELESS WISDOM <br> AGELESS BEAUTY</h4>
     </section>
     <!-- <div class="bg_cnt"></div> -->
-    <section id="cnt4" class="area">
-      <p>#With Sulwhasoo</p>
-      <ul class="clearfix">
-        <li tabindex="0"><img src="images/index/section4/01.jpg" alt="">
-          <div class="over">
-            <p>@sulwhasoo.official</p>
-          </div>
-        </li>
-        <li tabindex="0"><img src="images/index/section4/02.jpg" alt="">
-          <div class="over">
-            <p>@sulwhasoo.official</p>
-          </div>
-        </li>
-        <li tabindex="0"><img src="images/index/section4/03.jpg" alt="">
-          <div class="over">
-            <p>@sulwhasoo.official</p>
-          </div>
-        </li>
-        <li tabindex="0"><img src="images/index/section4/04.jpg" alt="">
-          <div class="over">
-            <p>@sulwhasoo.official</p>
-          </div>
-        </li>
-        <li tabindex="0"><img src="images/index/section4/05.jpg" alt="">
-          <div class="over">
-            <p>@sulwhasoo.official</p>
-          </div>
-        </li>
-      </ul>
+    <section id="cnt4" class="area fade">
+      <div class="fade_up">
+        <p>#With Sulwhasoo</p>
+        <ul class="clearfix">
+          <li tabindex="0"><img src="images/index/section4/01.jpg" alt="">
+            <div class="over">
+              <p>@sulwhasoo.official</p>
+            </div>
+          </li>
+          <li tabindex="0"><img src="images/index/section4/02.jpg" alt="">
+            <div class="over">
+              <p>@sulwhasoo.official</p>
+            </div>
+          </li>
+          <li tabindex="0"><img src="images/index/section4/03.jpg" alt="">
+            <div class="over">
+              <p>@sulwhasoo.official</p>
+            </div>
+          </li>
+          <li tabindex="0"><img src="images/index/section4/04.jpg" alt="">
+            <div class="over">
+              <p>@sulwhasoo.official</p>
+            </div>
+          </li>
+          <li tabindex="0"><img src="images/index/section4/05.jpg" alt="">
+            <div class="over">
+              <p>@sulwhasoo.official</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
   </div>
   <footer id="footer" class="bdbox">
