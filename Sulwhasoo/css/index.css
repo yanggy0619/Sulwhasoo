@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/* #cnt1 */
+#videoBg{width: 100%;height: 100vh;object-fit: cover;}
+
+/* #cnt2  */
+/* 텍스트  */
+#cnt2 .txt_cnt2{line-height: 50px;padding: 50px 100px;width: 280px;text-align: center;}
+#cnt2 p{font-size: 25px;}
+#cnt2 h3{font-size: 40px;}
+#cnt2 .txt_cnt2 > a{display: inline-block; font-size: 20px;border: 1px solid #3b3b3b;width: 120px;height: 30px;line-height: 30px;text-align: center;}
+#cnt2 .txt_cnt2 > a:hover, #cnt2 .txt_cnt2 > a:focus{border: 1px solid #fcb95e;background: #fcb95e;color: #fff;}
+/* 화살표 */
+.inner{overflow: hidden;}
+.swiper-container{overflow: visible;}
+.controller{top: 280px;right: 100px;}
+/* 화살표 svg */
+.swiper-button-prev{top: 0;left: -200px; background: url(../images/index/section2/arrow_prev.png);width: 70px;height: 19px;}
+.swiper-button-prev:hover, .swiper-button-prev:focus{background: url(../images/index/section2/arrow_prev_hover.png);}
+.swiper-button-next{background: url(../images/index/section2/arrow_next.png);width: 70px;height: 19px;}
+.swiper-button-next:hover, .swiper-button-next:focus{background: url(../images/index/section2/arrow_next_hover.png);}
+.controller div::after{display: none;}
+.circle_prev, .circle_next{stroke-dasharray: 144;stroke-dashoffset: 144;height: 50px;width: 50px;}
+.circle_prev{top: -10px;left: -10px;}
+.circle_next{top: -10px;right: -10px;}
+.circle_prev:hover,.circle_next:hover{animation: svgAni 1s linear forwards;}
+@keyframes svgAni {
+  0%{stroke-dashoffset: 144;}
+  100%{stroke-dasharray: 0;}
+} 
+/* 제품 */
+#cnt2 h3{font-weight: 300;}
+#cnt2 .swiper-wrapper{text-align: center; align-items: flex-end;padding: 100px 0px;}
+/* 제품 배경 */
+#cnt2 .product_bg img{left: 0;bottom: 270px;left: calc(50% - 157.5px); z-index: -1;}
+/* 스크롤바 */
+.swiper-scrollbar{width: 50%;height: 5px;margin: 0 auto;}
+
+/* #cnt3 */
+#cnt3 {display: flex;align-items: center;justify-content: center; background:url(../images/index/section3/메인이미지.png) no-repeat fixed center;width: 100%;height: 100vh;text-align: center;background-size: cover;}
+#cnt3 h4{font-family: spoqa; font-size: 50px;color: #fff;line-height: 1.5;font-weight: 300;}
+
+/* #cnt4 */
+#cnt4{font-size: 30px;font-weight: 500;font-family: spoqa;}
+#cnt4 p {padding-left: 30px;font-style: italic;}
+#cnt4 ul li{float: left;margin-left: 30px;}
+#cnt4 ul li:nth-child(4){margin-top: 22px;}
+#cnt4 ul li:nth-child(5){margin-top: 22px;}
+#cnt4 ul li{position: relative;}
+#cnt4 ul li .over{position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgb(252, 185, 94, .8);color: #fff;font-size: 18px;cursor: pointer;}
+#cnt4 ul li .over::after{content:"";position: absolute;top: calc(50% - 15px);left: calc(50% - 15px);background: url(../images/index/section4/인스타그램.png) no-repeat;width: 30px;height: 30px;}
+#cnt4 ul li .over p{position: absolute;bottom: 5px;left: 5px;}
+#cnt4 ul li .over{opacity: 0;transition: all 0.5s;}
+#cnt4 ul li:hover .over,#cnt4 ul li:focus .over {opacity: 1;}
+/* fade효과 */
+.fade .fade_up, .fade .fade_down, .fade .fade_right, .fade .fade_left{opacity: 0;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;transition: all 1s;}
+.fade .fade_up{transform: translate(0,100px);}
+.fade .fade_down{transform: translate(0,-100px);}
+.fade .fade_right{transform: translate(-100px,0);}
+.fade .fade_left{transform: translate(100px,0);}
+.fade.on .fade_up, .fade.on .fade_down, .fade.on .fade_right, .fade.on .fade_left{opacity: 1; transform: translate(0,0);}

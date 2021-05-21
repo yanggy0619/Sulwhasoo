@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스킨케어 : 제품</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/swiper-bundle.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/subcommon.css">
+    <link rel="stylesheet" href="../css/sub3.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/fadeIn.js"></script>
+    <script>
+        $(document).ready(function () {
+            const swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                },
+
+            autoplay: {
+                delay: 5000,
+            },
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="skip">
+        <a href="#cnt1">본문 바로가기</a>
+    </div>
+    <header id="header">
+        <h1 class="logo">
+            <a href="../index.html">
+                <img src="../images/common/header_logo.png" alt="설화수">
+            </a>
+        </h1>
+        <a href="" class="btn_nav" role="button">
+            <span class="blind">전체메뉴 열기</span>
+          </a>
+          <nav id="gnb">
+            <h2 class="blind">주메뉴</h2>
+            <ul>
+                <li><a href="../brand/brand.html" data-link="first">브랜드스토리</a></li>
+                <li><a href="../product/skin.html">제품</a>
+                  <ul>
+                    <li><a href="../product/skin.html">스킨케어</a></li>
+                    <li><a href="../product/makeup.html">메이크업</a></li>
+                  </ul>
+                </li>
+                <li><a href="../news/news.html">설화수소식지</a></li>
+                <li><a href="../community/review.html">커뮤니티</a></li>
+                <li><a href="../flagship/flagshipstore.html">플래그십스토어</a></li>
+                <!-- <li>
+                    <ul class="nav_bottom">
+                        <li><a href="">Login</a></li>
+                        <li><a href="">Mypage</a></li>
+                    </ul>
+                </li> -->
+              </ul>
+            <button class="btn_navclose" type="button" data-link="last"><img src="../images/common/nav_back.png" alt=""></button>
+          </nav>
+          <div class="gnb_dim"></div>
+        <div class="util">
+            <p class="lang" title="언어 : 한국어">KR</p>
+            <a href="" class="login">
+                <img src="../images/common/login.png" alt="로그인">
+            </a>
+            <a href="" class="shop">
+                <img src="../images/common/shop.png" alt="장바구니">
+            </a>
+            <button class="search">
+                <img src="../images/common/search.png" alt="검색">
+            </button>
+            <div class="search_input">
+                <input type="text" placeholder="검색어 입력" title="검색어 입력">
+                <button type="button"><img src="../images/common/search_enter.png" alt="검색어 입력확인"></button>
+            </div>
+        </div>
+        <img src="../images/common/header_bg.png" alt="">
+    </header>
+    <div class="skin_controller">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div id="wrap" class="skin">
+            <nav class="breadcrumb" aria-label="사이트 이동 경로">
+                <ol class="d_f">
+                    <li>
+                        <a href="../index.html" title="홈으로 돌아가기">HOME</a>
+                    </li>
+                    <li>
+                        <img src="../images/skin/arrow.png" alt="">
+                    </li>
+                    <li>
+                        <a href="skin.html">제품</a>
+                    </li>
+                    <li>
+                        <img src="../images/skin/arrow.png" alt="">
+                    </li>
+                    <li aria-current="page" class="current">
+                        <a href="skin.html">스킨케어</a>
+                    </li>
+                </ol>
+            </nav>
+        <section id="cnt1">
+            <div class="fade"> 
+                <div class="txt_wrap fade_right">
+                    <h2>윤조</h2>
+                    <div class="strong_wrap">
+                        <strong>베스트</strong>
+                        <strong>안티에이징</strong>
+                        <strong>보습/윤기</strong>
+                    </div>
+                    <p>산뜻하고 편안한 시그니처 향과 텍스처</p>
+                    <p>다양한 피부타입에서도 빠르고 산뜻하게 흡수되는 <br> 제형 기술과 편안함을 선사하는 향으로 <br> 누구에게나 감각적인 만족과 효능을 배가시켜 줍니다.</p>
+                </div>
+            </div>
+            <div class="fade">
+                <div class="best fade_left">
+                    <div class="rotate_img">
+                        <a href="" class="yoonjo"><img src="../images/skin/yoonjo.png" alt="윤조 에센스"></a>
+                        <h3>윤조 에센스</h3>
+                        <a href="" class="btn_more">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cnt2">
+            <div class="fade">
+                <div class="txt_wrap fade_left">
+                    <h2>자음</h2>
+                    <div class="strong_wrap"><strong>보습/윤기</strong></div>
+                    <p>충만한 보습으로 촉촉하고 부드럽게 마무리되어<br>
+                        유연한 피부를 가꾸어주는 설화수의 기본/필수 보습 라인</p>
+                </div>
+            </div>
+            <div class="jaeum fade">
+                <ul class="img_wrap3 fade_up d_f">
+                    <li>
+                        <a href="" class="skin">
+                            <img src="../images/skin/jaeumsoo_texture.png" alt="자음수 텍스처 : 흐르는 타입의 묽은 느낌" class="texture">
+                            <img src="../images/skin/jaeumsoo.png" alt="자음수">
+                        </a>
+                        <h3>자음수</h3>
+                        <a href="" class="btn_more">자세히 보기</a>
+                    </li>
+                    <li>
+                        <a href="" class="skin">
+                            <img src="../images/skin/jaeum_lotion_texture.png" alt="자음유액 텍스처 : 끈적임 없이 쫀쫀한 로션 타입 " class="texture">
+                            <img src="../images/skin/jaeum_lotion.png" alt="자음유액">
+                        </a>
+                        <h3>자음유액</h3>
+                        <a href="" class="btn_more">자세히 보기</a>
+                    </li>
+                    <li>
+                        <a href="" class="skin">
+                            <img src="../images/skin/jaeumsoo_cream_texture.png" alt="자음수분영양크림 텍스처 : 부드럽게 발리는 크림 타입 " class="texture">
+                            <img src="../images/skin/jaeum_cream.png" alt="자음수분영양크림">
+                        </a>
+                        <h3>자음수분영양크림</h3>
+                        <a href="" class="btn_more">자세히 보기</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="cnt3">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1 fade">
+                        <div>
+                            <div class="txt_wrap">
+                                <h2>자음생</h2>
+                                <div class="strong_wrap">
+                                    <strong>안티에이징</strong>
+                                    <strong>인삼</strong>
+                                </div>
+                                <p>인삼 속 수분과 영양을 응축한 귀한 증삼수™에 GINSENOMICS™를 더해<br>
+                                    촉촉하고 탄탄한 피부 바탕을 선사하는 안티에이징 라인</p>
+                            </div>
+                            <div class="jaeumsaeng">
+                                <ul class="img_wrap2 d_f">
+                                    <li>
+                                        <a href="" class="skin">
+                                            <img src="../images/skin/jaeumsaengsoo_texture.png" alt="자음생수 텍스처 : 투명한 액체로 묽은 타입 " class="texture">
+                                            <img src="../images/skin/jaeumsaengsoo.png" alt="자음생수">
+                                        </a>
+                                        <h3>자음생수</h3>
+                                        <a href="" class="btn_more">자세히 보기</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="skin">
+                                            <img src="../images/skin/jaeumsaeng_ample_texture.png" alt="자음생앰플 텍스처 : 앰플 알갱이가 들어가 있어서 문지르면서 터지는 타입 " class="texture">
+                                            <img src="../images/skin/jaeumsaeng_ample.png" alt="자음생앰플">
+                                        </a>
+                                        <h3>자음생 앰플</h3>
+                                        <a href="" class="btn_more">자세히 보기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="jaeumsaeng_bg">
+                            <img src="../images/skin/jaeumsaeng_bg.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide2 fade">
+                        <div class="sulin_bg">
+                            <img src="../images/skin/sulin_bg.jpg" alt="">
+                        </div>
+                        <div>
+                            <div class="txt_wrap">
+                                <h2>설린</h2>
+                                <div class="strong_wrap">
+                                    <strong>안티에이징</strong>
+                                    <strong>매화</strong>
+                                </div>
+                                <p>매화의 항산화 에너지와 발아오방종실 성분을 담아,<br>
+                                    피부의 생기를 깨우고 맑은 피부로 가꿔주는 생기탄력</p>
+                            </div>
+                            <div class="sulin">
+                                <ul class="img_wrap2 d_f">
+                                    <li>
+                                        <a href="" class="skin">
+                                            <img src="../images/skin/sullin_serum_texture.png" alt="설린세럼 텍스처 : 핑크빛 색깔의 묽은 타입 " class="texture">
+                                            <img src="../images/skin/sulin_serum.png" alt="설린 세럼">
+                                        </a>
+                                        <h3>설린세럼</h3>
+                                        <a href="" class="btn_more">자세히 보기</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="skin">
+                                            <img src="../images/skin/sulin_cream_texture.png" alt="설린아이크림 텍스처 : 핑크빛 색깔의 쫀쫀한 크림 타입 " class="texture">
+                                            <img src="../images/skin/sulin_cream.png" alt="설린아이크림">
+                                        </a>
+                                        <h3>설린아이크림</h3>
+                                        <a href="" class="btn_more">자세히 보기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+        <section id="cnt4">
+            <div class="fade">
+                <div class="txt_wrap fade_right">
+                    <h2>자정</h2>
+                    <div class="strong_wrap">
+                        <strong>미백/피부톤</strong>
+                    </div>
+                    <p>거친 피부결을 정돈해주고<br>
+                        미백 효능을 선사하는 젤 타입 브라이트닝</p>
+                </div>
+            </div>
+            <div class="jajung fade">
+                <ul class="img_wrap3 fade_up d_f">
+                    <li>
+                        <a href="" class="skin">
+                            <img src="../images/skin/jajungsoo_texture.png" alt="자정수  텍스처 : 투명하고 끈적임 없는 묽은 타입 " class="texture">
+                            <img src="../images/skin/jajungsoo.png" alt="자정수">
+                        </a>
+                        <h3>자정수</h3>
+                        <a href="" class="btn_more">자세히 보기</a>
+                    </li>
+                    <li>
+                        <a href="" class="skin">
+                            <img src="../images/skin/jajung_lotion_texture.png" alt="자정유액  텍스처 : 흰색 색상의 부드럽게 발리는 로션 타입 " class="texture">
+                            <img src="../images/skin/jajung_lotion.png" alt="자정유액">
+                        </a>
+                        <h3>자정유액</h3>
+                        <a href="" class="btn_more">자세히 보기</a>
+                    </li>
+                    <li>
+                        <a href="" class="skin">
+                            <img src="../images/skin/jajung_serum_texture.png" alt="자정세럼  텍스처 : 투명하고 쫀쫀한 세럼 타입 " class="texture">
+                            <img src="../images/skin/jajung_serum.png" alt="자정수세럼">
+                        </a>
+                        <h3>자정수세럼</h3>
+                        <a href="" class="btn_more">자세히 보기</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <footer id="footer" class="bdbox">
+        <div class="foot_wrap">
+            <div class="foot_top d_f bdbox">
+                <div class="foot_logo">
+                    <a href=""><img src="../images/common/footer_logo.png" alt="sulwhasoo"></a>
+                </div>
+                <a href="" class="btn_top bdbox"><img src="../images/common/top.png" alt="본문 위로 올라가기"></a>
+            </div>
+            <div class="foot_area p_r">
+                <div class="foot_menu">
+                    <ul class="d_f">
+                        <li><a href="https://www.beautypoint.co.kr/footer/privacy.do" target="_blank">개인정보처리방침</a></li>
+                        <li><a href="https://www.beautypoint.co.kr/footer/agreement.do" target="_blank">이용약관</a></li>
+                        <li><a href="https://www.apgroup.com/int/ko/misc/legal-information/legal-information.html"
+                                target="_blank">법적고지</a></li>
+                    </ul>
+                </div>
+                <div class="foot_info">
+                    <p>
+                        <span>㈜아모레퍼시픽</span>
+                        <span>서울특별시 용산구 한강대로 100(한강로2가)</span>
+                    </p>
+                    <p>
+                        <span>apmall_support@amorepacificmall.com</span>
+                        <span>080-030-5454(쇼핑문의)</span>
+                        <span>080-023-5454(제품문의)</span>
+                    </p>
+                    <p>
+                        <span>대표이사 : 안세홍</span>
+                        <span>사업자등록번호 : 106-86-43373</span>
+                        <span>통신판매업신고번호 : 2017-서울용산-1308</span>
+                    </p>
+                    <p>
+                        <span>&copy;AMOREPACIFIC CORPORATION. ALL RIGHTS RESERVED.</span>
+                        <a href="http://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank"
+                            title="wa인증마크(새창)"><img src="../images/common/mark.png" alt="wa인증마크"></a>
+                    </p>
+                </div>
+                <div class="foot_sns p_a">
+                    <ul class="d_f">
+                        <li>
+                            <a href="https://www.facebook.com/sulwhasoo.official" target="_blank">
+                                <img src="../images/common/facebook.png" alt="페이스북">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/sulwhasoo.official" target="_blank">
+                                <img src="../images/common/youtube.png" alt="유튜브">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/sulwhasoo.official" target="_blank">
+                                <img src="../images/common/instagram.png" alt="인스타그램">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/sulwhasoo.official" target="_blank">
+                                <img src="../images/common/kakao.png" alt="카카오톡">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
