@@ -15,7 +15,7 @@
     <script src="../js/common.js"></script>
     <script src="../js/fullpage.min.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
-    <script> //풀페이지 옵션
+    <script>
         $(document).ready(function () {
             $('#fullpage').fullpage({
                 licenseKey: 'YOUR_KEY_HERE',
@@ -32,9 +32,15 @@
                     $('.fp-tooltip').attr('aria-hidden', true);
                 }
             });
+            $('.btn_top').on('click', function () {
+                fullpage_api.moveTo(1); //본문1의 위치로 자동 이동시키기
+                // 접근성을 위해 문서의 처음으로 포커스 강제 이동
+                $('.logo a').focus();
+            });
         });
     </script>
-    <script> //swiper 옵션
+    <script>
+        // 문서가 작업할 준비를 완료하면 스크립트 동작시키기
         $(document).ready(function () {
             // swiper 스크립트를 호출해서 사용하기
             const swiper = new Swiper('.swiper-container', {
@@ -65,53 +71,52 @@
     </div>
     <header id="header">
         <h1 class="logo">
-            <a href="../index.html">
-                <img src="../images/common/header_logo.png" alt="설화수">
-            </a>
+          <a href="../index.html">
+            <img src="../images/common/header_logo.png" alt="설화수">
+          </a>
         </h1>
         <a href="" class="btn_nav" role="button">
-            <span class="blind">전체메뉴 열기</span>
+          <span class="blind">전체메뉴 열기</span>
         </a>
         <nav id="gnb">
-            <h2 class="blind">주메뉴</h2>
-            <ul>
-                <li><a href="../brand/brand.html" data-link="first">브랜드스토리</a></li>
-                <li><a href="../product/skin.html">제품</a>
-                    <ul>
-                        <li><a href="../product/skin.html">스킨케어</a></li>
-                        <li><a href="../product/makeup.html">메이크업</a></li>
-                    </ul>
-                </li>
-                <li><a href="../news/news.html">설화수소식지</a></li>
-                <li><a href="../community/review.html">커뮤니티</a></li>
-                <li><a href="../flagship/flagshipstore.html">플래그십스토어</a></li>
-                <!-- <ul class="nav_bottom">
-                    <li><a href="">Login</a></li>
-                    <li><a href="">Mypage</a></li>
-                </ul> -->
+          <h2 class="blind">주메뉴</h2>
+          <ul>
+            <li><a href="../brand/brand.html" data-link="first">브랜드스토리</a></li>
+            <li><a href="../product/skin.html">제품</a>
+              <ul>
+                <li><a href="../product/skin.html">스킨케어</a></li>
+                <li><a href="../product/makeup.html">메이크업</a></li>
+              </ul>
+            </li>
+            <li><a href="../news/news.html">설화수소식지</a></li>
+            <li><a href="../community/review.html">커뮤니티</a></li>
+            <li><a href="../flagship/flagshipstore.html">플래그십스토어</a></li>
+            <ul class="nav_bottom">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Mypage</a></li>
             </ul>
-            <button class="btn_navclose" type="button" data-link="last"><img src="../images/common/nav_back.png"
-                    alt=""></button>
+          </ul>
+          <button class="btn_navclose" type="button" data-link="last"><img src="../images/common/nav_back.png" alt=""></button>
         </nav>
         <div class="gnb_dim"></div>
         <div class="util">
-            <p class="lang" title="언어 : 한국어">KR</p>
-            <a href="" class="login">
-                <img src="../images/common/login.png" alt="로그인">
-            </a>
-            <a href="" class="shop">
-                <img src="../images/common/shop.png" alt="장바구니">
-            </a>
-            <button class="search">
-                <img src="../images/common/search.png" alt="검색열기">
-            </button>
-            <div class="search_input">
-                <input type="text" placeholder="검색어 입력" title="검색어 입력">
-                <button><img src="../images/common/search_enter.png" alt="검색어 입력확인"></button>
-            </div>
+          <p class="lang" title="언어 : 한국어">KR</p>
+          <a href="#" class="login">
+            <img src="../images/common/login.png" alt="로그인">
+          </a>
+          <a href="#" class="shop">
+            <img src="../images/common/shop.png" alt="장바구니">
+          </a>
+          <button class="search">
+            <img src="../images/common/search.png" alt="검색열기">
+          </button>
+          <div class="search_input">
+            <input type="text" placeholder="검색어 입력">
+            <button><img src="../images/common/search_enter.png" alt="검색어 입력확인"></button>
+          </div>
         </div>
         <img src="../images/common/header_bg.png" alt="">
-    </header>
+      </header>
 
     <div id="fullpage">
         <section class="section" id="story">
@@ -125,7 +130,6 @@
             </div>
         </section>
         <section class="section fp-auto-height" id="history">
-            <h3 class="blind" aria-hidden="true">역사 이야기</h3>
             <article id="historyAtc1">
                 <div class="tit_wrap fade">
                     <h3 class="underline fade_up">The story of Korea Ginseng</h3>
@@ -140,15 +144,15 @@
             </article>
 
             <article id="historyAtc2" class="d_f fade">
-                <h3 class="fade_right delay-4">설화수의 역사는 그 자체로<br>한국 화장품의 한 역사입니다.</h3>
-                <img src="../images/brand/section2_searcher.png" alt="설화수 연구원">
+                <strong class="fade_right delay-4">설화수의 역사는 그 자체로<br>한국 화장품의 한 역사입니다.</strong>
+                <img src="../images/brand/section2_searcher.png" alt="설화수 연구원" class="fade_right delay-4">
             </article>
-            <div class="history_wrap clearfix d_f">
-                <article id="historyAtc3" class="fade">
-                    <img src="../images/brand/section2_ginseng.jpg" alt="설화수 연구소 사진" class="fade_up">
+            <div class="history_wrap clearfix">
+                <article id="historyAtc3" class="f_l fade">
+                    <img src="../images/brand/section2_ginseng1.jpg" alt="설화수 연구소 사진"  class="fade_up" >
                     <div class="txt_wrap fade_up">
                         <p class="underline">Story1</p>
-                        <h4>황제가 쓴 성분</h4>
+                        <h5>황제가 쓴 성분</h5>
                         <p>1711년 프랑스 예수회의 자르투<br>
                             신부는 본국에 ‘보통 사람에게는 <br>
                             너무 비싸고 황제를 위한 것에는 <br>
@@ -157,24 +161,24 @@
 
                     </div>
                 </article>
-                <article id="historyAtc4" class="d_f fade">
-                    <img src="../images/brand/section2_lab.jpg" alt="고려 인삼" class="fade_left">
+                <article id="historyAtc4" class="f_l d_f fade">
+                    <img src="../images/brand/section2_lab2.jpg" alt="고려 인삼" class="fade_left">
                     <div class="txt_wrap fade_left delay-3">
                         <p class="underline">Story2</p>
-                        <h4>ABC 인삼 크림</h4>
+                        <h5>ABC 인삼 크림</h5>
                         <p>설화수는 50여 년에 걸친 도전과 혁신의<br> 산물입니다. 그 시작은 1966년으로,<br> 최초의 인삼 화장품&apos;ABC 인삼 크림&apos;이<br>
                             출시됩니다. 1997년, 한방 원료 연구는<br>깊이가 더해지면서 설화수로 진화됩니다.</p>
                     </div>
                 </article>
             </div>
             <article id="historyAtc5">
-                <h4>설화수의 특별함,<br>그 출발점은 고려 인삼이라는 재료입니다.</h4>
+                <strong>설화수의 특별함,<br>그 출발점은 고려 인삼이라는 재료입니다.</strong>
             </article>
 
         </section>
         <section class="section p_r" id="ingredient">
             <div class="tit_wrap fade">
-                <h3 class="underline fade_up">Ingredient</h3>
+                <h3 class="underline fade_up">ingredient</h3>
                 <h4 class="fade_up delay-2">설화수에 활용된 주재료</h4>
             </div>
             <div class="controller p_r">
@@ -182,13 +186,13 @@
                 <div class="swiper-button-prev">prev</div>
                 <div class="swiper-button-next">next</div>
             </div>
-            <div class="swiper-container">
+            <div class="swiper-container p_r">
                 <!-- 슬라이더 상세 본문 그룹 -->
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slide1">
                         <img src="../images/brand/section3_ginseng.jpg" alt="">
                         <div class="slide_txt">
-                            <h5>인삼</h5>
+                            <h3>인삼</h3>
                             <p>인삼 성분의 피부 효능은 피부노화,<br>
                                 산화적 스트레스에 의해 손상된 <br>
                                 피부의 회복 및 보습 효과에 이르기까지 다양하다.</p>
@@ -197,7 +201,7 @@
                     <div class="swiper-slide slide2">
                         <img src="../images/brand/section3_cheetah.jpg" alt="">
                         <div class="slide_txt">
-                            <h5>치차</h5>
+                            <h3>치차</h3>
                             <p>세균이나 진균등의 미생물증식을<br>
                                 억제시키는 항균작용으로 인해<br>
                                 기미제거나 여드름 치료에 좋다.</p>
@@ -206,14 +210,14 @@
                     <div class="swiper-slide slide3">
                         <img src="../images/brand/section3_aloeswood.jpg" alt="">
                         <div class="slide_txt">
-                            <h5>침향</h5>
+                            <h3>침향</h3>
                             <p>스스로를 보호하고 방어하는<br>신비로운 힘을 지닌 전설 속의<br>나무로, 예로부터 진귀한 원료로<br>사용되어 왔다.</p>
                         </div>
                     </div>
                     <div class="swiper-slide slide4">
                         <img src="../images/brand/section3_ginseng_root.jpg" alt="">
                         <div class="slide_txt">
-                            <h5>효삼</h5>
+                            <h3>효삼</h3>
                             <p>인삼 뿌리의 진화 형태로,<br>
                                 진세노사이드가 풍부한 효삼을 <br>발효하여
                                 유효 성분을 담아냈다.</p>
@@ -222,7 +226,7 @@
                     <div class="swiper-slide slide5">
                         <img src="../images/brand/section3_olive.jpg" alt="">
                         <div class="slide_txt">
-                            <h5>올리브오일</h5>
+                            <h3>올리브오일</h3>
                             <p>비타민 E와 프로비타민이 함유되어<br>
                                 보습력을 가지고 있어 영양을 <br>공급해주고
                                 건강한 피부표현이 <br>가능하다.</p>
@@ -231,7 +235,7 @@
                     <div class="swiper-slide slide6">
                         <img src="../images/brand/section3_ricebran.jpg" alt="">
                         <div class="slide_txt">
-                            <h5>쌀겨</h5>
+                            <h3>쌀겨</h3>
                             <p>쌀의 영양분의 전체 부분 중 29%를<br>
                                 차지하여 강한 항산화 작용과 미백<br>
                                 및 피부 수분 유지를 위한 장벽
@@ -245,7 +249,8 @@
         <section class="section clearfix" id="wisdom">
             <div class="tit_wrap fade">
                 <h3 class="underline fade_up">Infinite Wisdom</h3>
-                <h4 class="fade_up delay-2">한방 과학 연구로 부터 나오는 <br> 고급 기능성 화장품</h4>
+                <h4 class="fade_up delay-2">한방 과학 연구로 부터 나오는<br>
+                    고급 기능성 화장품</h4>
             </div>
             <div id="wisdomAtc1" class="wisdomAtc fade">
                 <img src="../images/brand/section4_lab.jpg" alt="설화수 연구소" class="fade_up">
@@ -264,11 +269,11 @@
                         연구 센터의 인삼 전문 연구원은 <br>
                         &apos;시험포&apos;에서 고려 인삼을 집중 연구합니다.</p>
                 </div>
-                <img src="../images/brand/section4_gingseng.jpg" alt="고려 인삼" class="fade_right">
+                <img src="../images/brand/section4_gingseng.jpg" alt="고려 인삼"  class="fade_right">
             </div>
             <div id="wisdomAtc3" class="wisdomAtc fade">
                 <img src="../images/brand/section4_face.jpg" alt="" class="fade_left">
-                <div class="fade_left">
+                <div  class="fade_left">
                     <h5>최신 안티에이징 연구</h5>
                     <p>과학적으로 검증된 안티에이징 자료를 축적해 왔습니다. <br>
                         이 자료를 바탕으로 다양한 안티에이징 연구를 진행, <br>
@@ -283,7 +288,7 @@
                 <div class="foot_wrap">
                     <div class="foot_top d_f bdbox">
                         <div class="foot_logo">
-                            <a href="../index.html"><img src="../images/common/footer_logo.png" alt="sulwhasoo"></a>
+                            <a href="#"><img src="../images/common/footer_logo.png" alt="sulwhasoo"></a>
                         </div>
                         <a href="" class="btn_top bdbox"><img src="../images/common/top.png" alt="본문 위로 올라가기"></a>
                     </div>

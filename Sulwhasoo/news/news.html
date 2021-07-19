@@ -11,22 +11,6 @@
     <link rel="stylesheet" href="../css/sub2.css">
     <script src="../js/jquery-1.12.4.min.js"></script>
     <script src="../js/common.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(window).on('scroll', function () {
-                var scrollY = $(this).scrollTop() + $(this).height() * 1 / 2;
-                console.log(scrollY);
-
-                $('.fade').each(function (idx) {
-                    if (scrollY > $(this).offset().top) {
-                        $(this).addClass('on');
-                    }
-                });
-            });
-
-            $(window).trigger('scroll');
-        });
-    </script>
 </head>
 
 <body>
@@ -41,42 +25,41 @@
         </h1>
         <a href="" class="btn_nav" role="button">
             <span class="blind">전체메뉴 열기</span>
-        </a>
-        <nav id="gnb">
+          </a>
+          <nav id="gnb">
             <h2 class="blind">주메뉴</h2>
             <ul>
                 <li><a href="../brand/brand.html" data-link="first">브랜드스토리</a></li>
                 <li><a href="../product/skin.html">제품</a>
-                    <ul>
-                        <li><a href="../product/skin.html">스킨케어</a></li>
-                        <li><a href="../product/makeup.html">메이크업</a></li>
-                    </ul>
+                  <ul>
+                    <li><a href="../product/skin.html">스킨케어</a></li>
+                    <li><a href="../product/makeup.html">메이크업</a></li>
+                  </ul>
                 </li>
                 <li><a href="../news/news.html">설화수소식지</a></li>
                 <li><a href="../community/review.html">커뮤니티</a></li>
                 <li><a href="../flagship/flagshipstore.html">플래그십스토어</a></li>
-                <!-- <ul class="nav_bottom">
-                    <li><a href="">Login</a></li>
-                    <li><a href="">Mypage</a></li>
-                </ul> -->
-            </ul>
-            <button class="btn_navclose" type="button" data-link="last"><img src="../images/common/nav_back.png"
-                    alt=""></button>
-        </nav>
-        <div class="gnb_dim"></div>
+                <ul class="nav_bottom">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Mypage</a></li>
+                </ul>
+              </ul>
+            <button class="btn_navclose" type="button" data-link="last"><img src="../images/common/nav_back.png" alt=""></button>
+          </nav>
+          <div class="gnb_dim"></div>
         <div class="util">
             <p class="lang" title="언어 : 한국어">KR</p>
-            <a href="" class="login">
+            <a href="#" class="login">
                 <img src="../images/common/login.png" alt="로그인">
             </a>
-            <a href="" class="shop">
+            <a href="#" class="shop">
                 <img src="../images/common/shop.png" alt="장바구니">
             </a>
             <button class="search">
                 <img src="../images/common/search.png" alt="검색">
             </button>
             <div class="search_input">
-                <input type="text" value="검색어 입력" title="검색어 입력">
+                <input type="text" placeholder="검색어 입력">
                 <button type="button"><img src="../images/common/search_enter.png" alt="검색어 입력확인"></button>
             </div>
         </div>
@@ -100,124 +83,113 @@
                 <img src="../images/news/search.png" alt="검색 버튼">
             </button>
         </form>
-
-        <div class="news_line1">
-            <ul class="news_wrap d_f fade">
-                <li id="news1" class="newsletter fade_up">
-                    <a href="">
-                        <div class="news_hover">
-                            <img src="../images/news/news1.jpg" alt="">
-                            <div class="tag_txt d_f"><span>#패션아이템<br>#건강미피부표현</span></div>
-                        </div>
-                        <h4>실란 콤팩트&컬러팩트 출시</h4>
-                        <p>한국 전통 문양과 공예 기술을 소개, 보존,<br>
-                            계승하기 위해 전통 소재 및 기법</p>
-                    </a>
-                </li>
-                <li id="news2" class="newsletter fade_up delay-2">
-                    <a href="">
-                        <div class="news_hover">
-                            <img src="../images/news/news2.jpg" alt="">
-                            <div class="tag_txt d_f"><span>#문화소통의장<br>#공공예술</span></div>
-                        </div>
-                        <h4>설화문화전 개최</h4>
-                        <p>도심 속의 ‘창’인 미디어 월을 매개로 전통과 <br>
-                            현대를 이어 교감하고 소통할 수 있는 소통의 <br> 장을 마련</p>
-                    </a>
-                </li>
-                <li id="news3" class="newsletter fade_up delay-4">
-                    <a href="">
-                        <div class="news_hover">
-                            <img src="../images/news/news3.jpg" alt="">
-                            <div class="tag_txt d_f"><span>#베스트셀러<br>#자음액티베이터</span></div>
-                        </div>
-                        <h4>윤조에센스, 누적매출 3조원 달성</h4>
-                        <p>한국 대표 럭셔리 뷰티 브랜드 설화수의<br>
-                            글로벌 베스트셀러 윤조에센스, 누적 매출액 <br>3조 원 돌파</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="news_line2">
-            <ul class="news_wrap d_f fade">
-                <li id="news4" class="newsletter fade_up">
-                    <a href="">
-                        <div class="news_hover">
-                            <img src="../images/news/news4.jpg" alt="">
-                            <div class="tag_txt d_f"><span>#윤기나는피부<br>#스테디셀러</span></div>
-                        </div>
-                        <h4>5세대 윤조에센스 업그레이드 출시</h4>
-                        <p>피부 건강 지수2를 146%까지 개선해<br>
-                            더욱 건강하고 윤기 나는 피부를 선사</p>
-                    </a>
-                </li>
-                <li id="news5" class="newsletter fade_up delay-2">
-                    <a href="">
-                        <div class="news_hover">
-                            <img src="../images/news/news5.jpg" alt="">
-                            <div class="tag_txt d_f"><span>#글로벌브랜드<br>#전세계속한국</span></div>
-                        </div>
-                        <h4>미국 세포라 신규 입점,북미 시장<br> 진출 가속화</h4>
-                        <p>미국 주요 도시 매장 정식 입점,<br>
-                            세포라닷컴 1월부터 제품 론칭 및 조기 품절</p>
-                    </a>
-                </li>
-                <li id="news6" class="newsletter fade_up delay-4">
-                    <a href="">
-                        <div class="news_hover">
-                            <img src="../images/news/news6.jpg" alt="">
-                            <div class="tag_txt d_f"><span>#전통문화보전<br>#리미티드에디션</span></div>
-                        </div>
-                        <h4>BFYC 에디션 출시, 수익금 글로벌<br>
-                            전통문화 후원 활동 기부</h4>
-                        <p>전통문화 보전을 위한 글로벌 사회공헌 캠페인<br>
-                            리미티드 에디션을 출시, 판매수익금 일부는<br>
-                            국내, 글로벌 전통문화 후원 활동에 기부</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="news_line3">
-            <ul class="news_wrap d_f fade">
-                <li id="news7" class="newsletter fade_up">
-                    <a href="">
-                        <div class="news_hover">
-                            <img src="../images/news/news7.jpg" alt="">
-                            <div class="tag_txt d_f"><span>#설화수뮤즈<br>#전통문양아름다움</span></div>
-                        </div>
-                        <h4>송혜교, 전통 문양의 재발견<br>
-                            설화문화전 ‘문양의 집’ 방문</h4>
-                        <p>설화수의 글로벌 뮤즈로 글로벌 시장에서<br>
-                            다양한 캠페인을 통해 브랜드의 스토리를<br>
-                            발신해 나감</p>
-                    </a>
-                </li>
-                <li id="news8" class="newsletter fade_up delay-2">
-                    <a href="">
-                        <div class="news_hover">
-                            <img src="../images/news/news8.jpg" alt="">
-                            <div class="tag_txt d_f"><span>#안티폴루션<br>#저자극선크림</span></div>
-                        </div>
-                        <h4>안티폴루션 선케어 상백크림<br>
-                            업그레이드 출시</h4>
-                        <p>초미세먼지, 자외선 등 유해환경에서 피부를<br>
-                            보호해주는 안티폴루션 선케어 제품, 상백크림<br>
-                            업그레이드해 출시</p>
-                    </a>
-                </li>
-                <li id="news9" class="newsletter fade_up delay-4">
-                    <a href="">
-                        <div class="news_hover">
-                            <img src="../images/news/news9.jpg" alt="">
-                            <div class="tag_txt d_f"><span>#전통한복체험<br>#매화문양금박</span></div>
-                        </div>
-                        <h4>한복 체험 프로그램 &apos;설화단장&apos; 오픈</h4>
-                        <p>설화수 플래그십 스토어에서 ‘설화단장’ 운영<br>
-                            전통 문화의 아름다움에 대해 알림</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <ul class="news_wrap p_r">
+            <li id="news1" class="newsletter">
+                <a href="">
+                    <div class="news_hover">
+                        <img src="../images/news/news1.jpg" alt="">
+                        <div class="tag_txt d_f"><span>#패션아이템<br>#건강미피부표현</span></div>
+                    </div>
+                    <h4>실란 콤팩트&컬러팩트 출시</h4>
+                    <p>한국 전통 문양과 공예 기술을 소개, 보존,<br>
+                        계승하기 위해 전통 소재 및 기법</p>
+                </a>
+            </li>
+            <li id="news2" class="newsletter">
+                <a href="">
+                    <div class="news_hover">
+                        <img src="../images/news/news2.jpg" alt="">
+                        <div class="tag_txt d_f"><span>#문화소통의장<br>#공공예술</span></div>
+                    </div>
+                    <h4>설화문화전 개최</h4>
+                    <p>도심 속의 ‘창’인 미디어 월을 매개로 전통과 <br>
+                        현대를 이어 교감하고 소통할 수 있는 소통의 <br> 장을 마련</p>
+                </a>
+            </li>
+            <li id="news3" class="newsletter">
+                <a href="">
+                    <div class="news_hover">
+                        <img src="../images/news/news3.jpg" alt="">
+                        <div class="tag_txt d_f"><span>#베스트셀러<br>#자음액티베이터</span></div>
+                    </div>
+                    <h4>윤조에센스, 누적매출 3조원 달성</h4>
+                    <p>한국 대표 럭셔리 뷰티 브랜드 설화수의<br>
+                        글로벌 베스트셀러 윤조에센스, 누적 매출액 <br>3조 원 돌파</p>
+                </a>
+            </li>
+            <li id="news4" class="newsletter">
+                <a href="">
+                    <div class="news_hover">
+                        <img src="../images/news/news4.jpg" alt="">
+                        <div class="tag_txt d_f"><span>#윤기나는피부<br>#스테디셀러</span></div>
+                    </div>
+                    <h4>5세대 윤조에센스 업그레이드 출시</h4>
+                    <p>피부 건강 지수2를 146%까지 개선해<br>
+                        더욱 건강하고 윤기 나는 피부를 선사</p>
+                </a>
+            </li>
+            <li id="news5" class="newsletter">
+                <a href="">
+                    <div class="news_hover">
+                        <img src="../images/news/news5.jpg" alt="">
+                        <div class="tag_txt d_f"><span>#글로벌브랜드<br>#전세계속한국</span></div>
+                    </div>
+                    <h4>미국 세포라 신규 입점,북미 시장<br> 진출 가속화</h4>
+                    <p>미국 주요 도시 매장 정식 입점,<br>
+                        세포라닷컴 1월부터 제품 론칭 및 조기 품절</p>
+                </a>
+            </li>
+            <li id="news6" class="newsletter">
+                <a href="">
+                    <div class="news_hover">
+                        <img src="../images/news/news6.jpg" alt="">
+                        <div class="tag_txt d_f"><span>#전통문화보전<br>#리미티드에디션</span></div>
+                    </div>
+                    <h4>BFYC 에디션 출시, 수익금 글로벌<br>
+                        전통문화 후원 활동 기부</h4>
+                    <p>전통문화 보전을 위한 글로벌 사회공헌 캠페인<br>
+                        리미티드 에디션을 출시, 판매수익금 일부는<br>
+                        국내, 글로벌 전통문화 후원 활동에 기부</p>
+                </a>
+            </li>
+            <li id="news7" class="newsletter">
+                <a href="">
+                    <div class="news_hover">
+                        <img src="../images/news/news7.jpg" alt="">
+                        <div class="tag_txt d_f"><span>#설화수뮤즈<br>#전통문양아름다움</span></div>
+                    </div>
+                    <h4>송혜교, 전통 문양의 재발견<br>
+                        설화문화전 ‘문양의 집’ 방문</h4>
+                    <p>설화수의 글로벌 뮤즈로 글로벌 시장에서<br>
+                        다양한 캠페인을 통해 브랜드의 스토리를<br>
+                        발신해 나감</p>
+                </a>
+            </li>
+            <li id="news8" class="newsletter">
+                <a href="">
+                    <div class="news_hover">
+                        <img src="../images/news/news8.jpg" alt="">
+                        <div class="tag_txt d_f"><span>#안티폴루션<br>#저자극선크림</span></div>
+                    </div>
+                    <h4>안티폴루션 선케어 상백크림<br>
+                        업그레이드 출시</h4>
+                    <p>초미세먼지, 자외선 등 유해환경에서 피부를<br>
+                        보호해주는 안티폴루션 선케어 제품, 상백크림<br>
+                        업그레이드해 출시</p>
+                </a>
+            </li>
+            <li id="news9" class="newsletter">
+                <a href="">
+                    <div class="news_hover">
+                        <img src="../images/news/news9.jpg" alt="">
+                        <div class="tag_txt d_f"><span>#전통한복체험<br>#매화문양금박</span></div>
+                    </div>
+                    <h4>한복 체험 프로그램 &apos;설화단장&apos; 오픈</h4>
+                    <p>설화수 플래그십 스토어에서 ‘설화단장’ 운영<br>
+                        전통 문화의 아름다움에 대해 알림</p>
+                </a>
+            </li>            
+        </ul>
         <div class="news_page">
             <ul class="news_pg modal">
                 <li><a href="" class="first">처음 페이지</a></li>

@@ -3,8 +3,8 @@
 /* skin 페이지 */
 
 /* .txt_wrap */
-.txt_wrap h2{font-family: Eulyoo;font-size: 50px;font-weight: 700;letter-spacing: 1.5px;color: #f57e3c;}
-.txt_wrap .strong_wrap strong{font-family: Spoqa;font-size: 20px;line-height: 1.17;letter-spacing: 0.75px;font-weight: 400;background: rgba(252, 185, 94,.4) url("../images/skin/leaf.png") no-repeat 5% 50%;padding-left: 30px;}
+.txt_wrap h2{font-family: Eulyoo;font-size: 60px;font-weight: 700;letter-spacing: 1.5px;color: #f57e3c;}
+.txt_wrap .strong_wrap strong{font-family: Spoqa;font-size: 25px;line-height: 1.17;letter-spacing: 0.75px;font-weight: 400;}
 /* .fade(.img_wrap2, .img_wrap3의 공통) */
 .fade p{font-family: Spoqa;font-size: 16px;line-height: 2.19;letter-spacing: 0.4px;margin-top: 40px;}
 .fade h3{letter-spacing: 0.75px;margin-top: 11px;}
@@ -17,29 +17,27 @@
 #cnt2 .strong_wrap, #cnt4 .strong_wrap{margin: 67px 0;}
 .img_wrap3{margin-top: 100px;}
 .img_wrap3 li + li{margin-left: 80px;}
-.img_wrap3 li a:first-child img{position: absolute;left: 50%;top: 50%;-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);transform: translate(-50%,-50%);}
+.img_wrap3 li a:first-child img{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
 
 /* #cnt1 */
 #cnt1{margin-top: 88px;}
 #cnt1 .fade h2{margin-top: 113px;}
-#cnt1 .fade .strong_wrap{padding: 91px 0 88px;}
-#cnt1 .strong_wrap strong:first-child{display: block;margin-bottom: 25px;width: 70px;box-sizing: content-box;}
+#cnt1 .fade .strong_wrap{margin: 91px 0 88px;}
+#cnt1 .strong_wrap strong:first-child{display: block;margin-bottom: 25px;width: 90px;box-sizing: content-box;}
 #cnt1 .strong_wrap strong:nth-child(2){margin-right: 47px;}
 #cnt1 .best{padding: 91px 35px 181px 130px;box-sizing: border-box;background: url("../images/skin/yoonjo_bg.jpg") no-repeat right center;width: 824px;height: 710px;position: relative;}
 #cnt1 .best .rotate_img{width: 180px;height: 564px;}
-#cnt1 .best .rotate_img img{-webkit-transition: all 0.5s;-moz-transition: all 0.5s;transition: all 0.5s;}
-#cnt1 .best .rotate_img:hover img, #cnt1 .best .rotate_img:focus img{-webkit-transform: rotate(-13deg);-moz-transform: rotate(-13deg);transform: rotate(-13deg);}
+#cnt1 .best .rotate_img img{transition: all 0.5s;}
+#cnt1 .best .rotate_img:hover img, #cnt1 .best .rotate_img:focus img{transform: rotate(-13deg)}
 
 /* #cnt2 */
 #cnt2 .img_wrap3{margin: 99px 0 240px;}
 #cnt2 .img_wrap3 li .skin{position: relative;width: 327px;height: 321px;border-radius: 50%;box-shadow: 1px 2px 3px #3b3b3b inset;display: inline-block;}
-#cnt2 .img_wrap3 li .skin img.texture{position: absolute;z-index: 10;opacity: 0;-webkit-transition: opacity 0.5s;-moz-transition: opacity 0.5s;transition: opacity 0.5s;}
-#cnt2 .img_wrap3 li:nth-child(3) .skin img:nth-of-type(2){-webkit-transform: translate(-50%,-25%);-moz-transform: translate(-50%,-25%);transform: translate(-50%,-25%);}
-#cnt2 .img_wrap3 li:nth-child(1) .skin img.texture{width: 334px;height: 326px;}
-#cnt2 .img_wrap3 li:nth-child(2) .skin img.texture{width: 329px;height: 326px;}
-#cnt2 .img_wrap3 li:nth-child(3) .skin img.texture{width: 341px;height: 334px;}
-#cnt2 .img_wrap3 li .skin:hover img.texture, #cnt2 .img_wrap3 li .skin:focus img.texture{opacity: 1;}
-
+#cnt2 .img_wrap3 li .skin:hover::after, #cnt2 .img_wrap3 li .skin:focus::after{content: "";position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);z-index: 10;}
+#cnt2 .img_wrap3 li:nth-child(3) .skin img{transform: translate(-50%,-25%)}
+#cnt2 .img_wrap3 li:nth-child(1) .skin:hover::after, #cnt2 .img_wrap3 li:nth-child(1) .skin:focus::after{background: url("../images/skin/jaeumsoo_texture.png");width: 334px;height: 326px;}
+#cnt2 .img_wrap3 li:nth-child(2) .skin:hover::after, #cnt2 .img_wrap3 li:nth-child(2) .skin:focus::after{background: url("../images/skin/jaeum_lotion_texture.png");width: 327px;height: 326px;}
+#cnt2 .img_wrap3 li:nth-child(3) .skin:hover::after, #cnt2 .img_wrap3 li:nth-child(3) .skin:focus::after{background: url("../images/skin/jaeumsoo_cream_texture.png");width: 341px;height: 334px;}
 /* #cnt3 */
 #cnt3{margin-top: 240px;}
 #cnt3 .slide2{text-align: right;}
@@ -50,16 +48,14 @@
 #cnt3 .img_wrap2{margin-top: 83px;}
 #cnt3 .img_wrap2 li + li{padding-left: 44px;}
 #cnt3 .img_wrap2 li .skin{position: relative;width: 271px;height: 270px;border-radius: 50%;box-shadow: 1px 2px 3px #3b3b3b inset;display: inline-block;}
-.img_wrap2 li .skin img, #cnt3 .img_wrap2 li .skin img.texture{position: absolute;left: 50%;top: 50%;-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);transform: translate(-50%,-50%);}
-#cnt3 .img_wrap2 li .skin img.texture{opacity: 0;-webkit-transition: opacity 0.5s;-moz-transition: opacity 0.5s;transition: opacity 0.5s;z-index: 10;}
-#cnt3 .img_wrap2 li .skin:hover img.texture, #cnt3 .img_wrap2 li .skin:focus img.texture{opacity: 1;}
-#cnt3 .jaeumsaeng .img_wrap2 li:nth-child(1) .skin img.texture{width: 282px;height: 280px;margin-left: 5px;}
-#cnt3 .jaeumsaeng .img_wrap2 li:nth-child(2) .skin img.texture{width: 277px;height: 276px;}
-#cnt3 .sulin .img_wrap2 li .skin img{-webkit-transform: translate(-45%,-50%);-moz-transform: translate(-45%,-50%);transform: translate(-45%,-50%);}
-#cnt3 .sulin .img_wrap2 li:nth-child(1) .skin img.texture{width: 293px;height: 293px;margin-left: -10px;}
-#cnt3 .sulin .img_wrap2 li:nth-child(2) .skin img.texture{width: 293px;height: 295px;margin-left: -25px;}
-/* #cnt3 스와이퍼 버튼 제어 */
-#cnt3 .sulin .btn_more{text-align: center;}
+.img_wrap2 li .skin img{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
+#cnt3 .img_wrap2 li a:hover::after, #cnt3 .img_wrap2 li a:focus::after{content: "";position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);z-index: 10;background: no-repeat left top;}
+#cnt3 .jaeumsaeng .img_wrap2 li:nth-child(1) .skin:hover::after, #cnt3 .jaeumsaeng .img_wrap2 li:nth-child(1) .skin:focus::after{background: url("../images/skin/jaeumsaengsoo_texture.png");width: 282px;height: 280px;}
+#cnt3 .jaeumsaeng .img_wrap2 li:nth-child(2) .skin:hover::after, #cnt3 .jaeumsaeng .img_wrap2 li:nth-child(2) .skin:focus::after{background: url("../images/skin/jaeumsaenga_mple_texture.png");width: 277px;height: 276px;}
+#cnt3 .sulin .img_wrap2 li:nth-child(1) .skin:hover::after, #cnt3 .sulin .img_wrap2 li:nth-child(1) .skin:focus::after{background: url("../images/skin/sullin_serum_texture.png");width: 293px;height: 293px;}
+#cnt3 .sulin .img_wrap2 li:nth-child(2) .skin:hover::after, #cnt3 .sulin .img_wrap2 li:nth-child(2) .skin:focus::after{background: url("../images/skin/sulin_cream_texture.png");width: 293px;height: 295px;margin-left: -10px;}
+#cnt3 .sulin .img_wrap2 li .skin img{transform: translate(-45%,-50%)}
+#cnt3 .sulin .btn_more{text-align: left;}
 .skin_controller .swiper-button-prev{left: 13%;top: 2550px;}
 .skin_controller .swiper-button-next{right: 13%;top: 2550px;}
 .skin_controller .swiper-pagination{position: absolute; top: 2950px;left: 50%;width: 100px;height: 20px;margin-left: -50px;}
@@ -68,12 +64,10 @@
 /* #cnt4 */
 #cnt4{margin-bottom: 81px;}
 #cnt4 .img_wrap3 li .skin{position: relative;width: 316px;height: 310px;border-radius: 50%;box-shadow: 1px 2px 3px #3b3b3b inset;display: inline-block;}
-#cnt4 .img_wrap3 li .skin img{position: absolute;left: 50%;top: 50%;-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);transform: translate(-50%,-50%);}
-#cnt4 .img_wrap3 li .skin img.texture{z-index: 10;opacity: 0;-webkit-transition: opacity 0.5s;-moz-transition: opacity 0.5s;transition: opacity 0.5s;}
-#cnt4 .img_wrap3 li:nth-child(1) .skin img.texture{width: 326px;height: 325px;}
-#cnt4 .img_wrap3 li:nth-child(2) .skin img.texture{width: 322px;height: 321px;}
-#cnt4 .img_wrap3 li:nth-child(3) .skin img.texture{width: 322px;height: 321px;}
-#cnt4 .img_wrap3 li .skin:hover img.texture,#cnt4 .img_wrap3 li .skin:focus img.texture{opacity: 1;}
+#cnt4 .img_wrap3 li a:hover::after, #cnt4 .img_wrap3 li a:focus::after{content: "";position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);z-index: 10;background: no-repeat left top;}
+#cnt4 .img_wrap3 li:nth-child(1) .skin:hover::after, #cnt4 .img_wrap3 li:nth-child(1) .skin:focus::after{background: url("../images/skin/jajungsoo_texture.png");width: 326px;height: 325px;}
+#cnt4 .img_wrap3 li:nth-child(2) .skin:hover::after, #cnt4 .img_wrap3 li:nth-child(2) .skin:focus::after{background: url("../images/skin/jajung_lotion_texture.png");width: 322px;height: 321px;}
+#cnt4 .img_wrap3 li:nth-child(3) .skin:hover::after, #cnt4 .img_wrap3 li:nth-child(3) .skin:focus::after{background: url("../images/skin/jajung_serum_texture.png");width: 322px;height: 321px;}
 
 /* makeup 페이지 */
 
@@ -85,20 +79,28 @@
 /* #cnt common */
 ul li h4{margin-top: 50px;font-weight: bold;}
 ul li{position: relative;}
-ul li .makeup .m_texture{content: "";position: absolute;left: -1px;top: -1px;background: no-repeat;width: 341px;height: 338px;z-index: 20;opacity: 0;transition: opacity 0.5s;}
-ul li .makeup:hover .m_texture, ul li .makeup:focus .m_texture{opacity: 1;}
+ul li .makeup::after{content: "";position: absolute;left: 0;top: 0;background: no-repeat;width: 341px;height: 338px;z-index: 20;}
 
 /* #cnt1 */
-#wrap.makeup h2{color: #f57e3c;text-align: center;font-size: 45px;font-family: eulyoo;margin-top: 637px;}
-
+#wrap.makeup h2{color: #f57e3c;text-align: center;font-size: 50px;font-family: eulyoo;margin-top: 637px;}
+#cnt1 ul li:nth-child(1) .makeup:hover::after, #cnt1 ul li:nth-child(1) .makeup:focus::after{background-image: url("../images/makeup/poundation_texture.png");}
+#cnt1 ul li:nth-child(2) .makeup:hover::after, #cnt1 ul li:nth-child(2) .makeup:focus::after{background-image: url("../images/makeup/poundation_glow_texture.png");}
+#cnt1 ul li:nth-child(3) .makeup:hover::after, #cnt1 ul li:nth-child(3) .makeup:focus::after{background-image: url("../images/makeup/poundation_jinsul_texture.png");}
 /* #cnt2 */
 #cnt2, #cnt3{margin-top: 129px;}
+#cnt2 ul li:nth-child(1) .makeup:hover::after, #cnt1 ul li:nth-child(1) .makeup:focus::after{background-image: url("../images/makeup/cushion_texture.png");}
+#cnt2 ul li:nth-child(2) .makeup:hover::after, #cnt1 ul li:nth-child(2) .makeup:focus::after{background-image: url("../images/makeup/cushion_bright_texture.png");}
+#cnt2 ul li:nth-child(3) .makeup:hover::after, #cnt1 ul li:nth-child(3) .makeup:focus::after{background-image: url("../images/makeup/cushion_jinsul_texture.png");}
+/* #cnt3 */
+#cnt3 ul li:nth-child(1) .makeup:hover::after, #cnt1 ul li:nth-child(1) .makeup:focus::after{background-image: url("../images/makeup/powder_texture.png");}
+#cnt3 ul li:nth-child(2) .makeup:hover::after, #cnt1 ul li:nth-child(2) .makeup:focus::after{background-image: url("../images/makeup/lip_texture.png");}
+#cnt3 ul li:nth-child(3) .makeup:hover::after, #cnt1 ul li:nth-child(3) .makeup:focus::after{background-image: url("../images/makeup//sun_texture.png");}
 
 /* review 페이지 */
 #review_bg{position: absolute;left: 0;top: 80px;background: url("../images/review/review_bg.jpg") no-repeat fixed center;background-size: cover;width: 100%;height: 540px;margin: 100px 0;}
-#review_bg h2{color: #3b3b3b;font-size: 40px;font-family: eulyoo;margin-top: 250px;margin-left: 60%;}
+#review_bg h2{color: #3b3b3b;font-size: 45px;font-family: eulyoo;margin-top: 250px;margin-left: 60%;}
 /* review 제목 공통 */
-.review h2{text-align: center;font-size: 45px;}
+.review h2{text-align: center;font-size: 50px;}
 /* #cnt1 스와이퍼 화살표 제어 */
 .review_controller .swiper-button-prev, .review_controller .swiper-button-next{position: absolute;top: 1250px;}
 .review_controller .swiper-button-prev{left: 14.27083333333333vw;}
@@ -109,7 +111,7 @@ ul li .makeup:hover .m_texture, ul li .makeup:focus .m_texture{opacity: 1;}
 .review .best_tit{margin-top: 930px;}
 .review #cnt1 .swiper-container{margin-top: 95px;height: 367px;}
 .review #cnt1 .swiper-slide{position: relative;}
-.bestreview_txt{position: absolute;left: 0;top: 0;width: 100%;height: 100%;font-family: Spoqa;text-align: left;color: #fff;z-index: 10;opacity: 0;-webkit-transition: opacity 0.5s;-moz-transition: opacity 0.5s;transition: opacity 0.5s;}
+.bestreview_txt{position: absolute;left: 0;top: 0;width: 100%;height: 100%;font-family: Spoqa;text-align: left;color: #fff;z-index: 10;opacity: 0;transition: opacity 0.5s;}
 .bestreview_cnt{width: 324px;height: 149px;margin: 10px 0 80px 15px;font-size: 24px;font-weight: 400;line-height: 1.75;letter-spacing: 0.6px;}
 .star{position: absolute;left: 34px;bottom: 80px;}
 .star + p{position: absolute;left: 13px;bottom: 19px;font-size: 19px;}
@@ -128,12 +130,12 @@ ul li .makeup:hover .m_texture, ul li .makeup:focus .m_texture{opacity: 1;}
 .review .breadcrumb{width: 487px;height: 20px;line-height: 20px;}
 .review .breadcrumb li{position: relative;}
 .review .breadcrumb li:first-child{margin-left: 20px;}
-.review .breadcrumb li + li::after{content: "";position: absolute;width: 1px;height: 100%;background: #000;left: -25px;top: 0;}
+.review .breadcrumb li + li::after{content: "";position: absolute;width: 1px;height: 100%;background: #000;left: -35px;top: 0;}
 .review input{border-bottom: 1px solid #3b3b3b;}
 /* table */
 #review_all .wid250{width: 250px;}
 #review_all .wid600{width: 600px;}
-#review_all thead tr{height: 69px;background: #f9e9cd;font-family: eulyoo;font-size: 20px;color: #3b3b3b;}
+#review_all thead tr{height: 69px;background: #f9e9cd;font-family: eulyoo;font-size: 25px;color: #3b3b3b;}
 #review_all tbody{text-align: center;font-family: spoqa;}
 #review_all tbody tr{height: 50px;border-bottom: 1px solid #3b3b3b;}
 #review_all tbody tr .content{display: block;width: 560px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: left;line-height: 50px;}
@@ -141,12 +143,14 @@ ul li .makeup:hover .m_texture, ul li .makeup:focus .m_texture{opacity: 1;}
 .review #cnt2 .page .pagination{justify-content: center;margin-top: 30px;font-family: spoqa;}
 .review #cnt2 .page .pagination li{padding-right: 30px;line-height: 26px;}
 .review #cnt2 .page .pagination .first{padding-right: 25px;}
-.review #cnt2 .page .pagination .active_num{font-size: 18px;background-color: #fcb95e;}
-.review #cnt2 .page .pagination .num{width: 30px;height: 30px;display: inline-block;text-align: center;border-radius: 100%;}
+.review #cnt2 .page .pagination .active_num{font-weight: 700;font-size: 18px;}
 .review #cnt2 .page .pagination .last{padding-left: 25px;}
-.pagination a.active {background-color: #fcb95e;}
+.pagination a.active {
+    background-color: #f57e3c;
+    color: white;
+  }
 /* #cnt3 */
-.review #cnt3 .event_tit{font-family: Eulyoo;font-size: 25px;font-weight: 600;line-height: 1.17;letter-spacing: 0.75px;color: #3b3b3b;}
+.review #cnt3 .event_tit{font-family: Eulyoo;font-size: 30px;font-weight: 600;line-height: 1.17;letter-spacing: 0.75px;color: #3b3b3b;}
 .review #cnt3 .event{background: url("../images/review/event-bg.png") no-repeat;height: 482px;text-align: center;font-family: spoqa;}
 .review #cnt3 .event ul{justify-content: space-around;padding: 85px 0 59px;}
 .review #cnt3 .event ul li p{padding-top: 30px;font-size: 16px;}
