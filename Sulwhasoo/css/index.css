@@ -32,7 +32,9 @@
 #cnt2 h3{font-weight: 300;}
 #cnt2 .swiper-wrapper{text-align: center; align-items: flex-end;padding: 100px 0px;}
 /* 제품 배경 */
-#cnt2 .product_bg img{left: 0;bottom: 270px;left: calc(50% - 157.5px); z-index: -1;}
+#cnt2 .product_bg{position: absolute;left: 10px;bottom: 65px;z-index: -1;opacity: 0;transition: opacity 0.8s;}
+#cnt2 .swiper-slide-active .product_bg{opacity: 1;}
+
 /* 스크롤바 */
 .swiper-scrollbar{width: 50%;height: 5px;margin: 0 auto;}
 

@@ -14,6 +14,7 @@
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/fadeIn.js"></script>
+  <script src="js/main.js"></script>
 
   <script>
     window.addEventListener('load', function () {
@@ -37,7 +38,7 @@
       },
 
       slidesPerView: 5,  //한화면에 보여질 슬라이더 개수
-
+      centeredSlides: true,
       //scrollbar
       scrollbar : {
 		  el : '.swiper-scrollbar',
@@ -79,8 +80,8 @@
         <li><a href="flagship/flagshipstore.html">플래그십스토어</a></li>
         <li>
           <ul class="nav_bottom">
-              <li><a href="" alt="login">Login</a></li>
-              <li><a href="" alt="mypage">Mypage</a></li>
+            <li><a href="index.html" alt="login">Login</a></li>
+            <li><a href="index.html" alt="mypage">Mypage</a></li>
           </ul>
         </li>
       </ul>
@@ -120,14 +121,6 @@
         <h3>BEST FOR YOU</h3>
         <a href="product/skin.html">제품 더보기</a>
       </div>
-
-    <div class="product_bg">
-      <img src="images/index/section2/설린세럼bg.png" alt="" class="p_a">
-      <!-- <img src="images/index/section2/여온오일bg.png" alt="">
-      <img src="images/index/section2/수율크림bg.png" alt="">
-      <img src="images/index/section2/자음생앰플bg.png" alt="">
-      <img src="images/index/section2/윤조에센스bg.png" alt=""> -->
-    </div>
       <!-- 슬라이더 -->
       <div class="inner">
         <div class="swiper-container">
@@ -136,22 +129,27 @@
             <!-- Slides -->
             <div class="swiper-slide slide1">
               <img src="images/index/section2/자음생앰플.png" alt="자음생앰플">
+              <img src="images/index/section2/자음생앰플bg.png" alt="" class="product_bg">
               <p>자음생앰플</p>
             </div>
             <div class="swiper-slide slide2">
               <img src="images/index/section2/윤조에센스.png" alt="윤조에센스">
+              <img src="images/index/section2/윤조에센스bg.png" alt="" class="product_bg">
               <p>윤조에센스</p>
             </div>
             <div class="swiper-slide slide3">
               <img src="images/index/section2/설린세럼.png" alt="설린세럼">
+              <img src="images/index/section2/설린세럼bg.png" alt="" class="product_bg">
               <p>설린세럼</p>
             </div>
             <div class="swiper-slide slide4">
               <img src="images/index/section2/여온오일.png" alt="여온오일">
+              <img src="images/index/section2/여온오일bg.png" alt="" class="product_bg">
               <p>여온오일</p>
             </div>
             <div class="swiper-slide slide5">
               <img src="images/index/section2/수율크림.png" alt="수율크림">
+              <img src="images/index/section2/수율크림bg.png" alt="" class="product_bg">
               <p>수율크림</p>
             </div>
           </div>
